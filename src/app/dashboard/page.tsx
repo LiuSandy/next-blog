@@ -4,7 +4,7 @@ export default async function ExamplePage() {
 
   return (
     <div>
-      <h1>Server-Side Rendered Component</h1>
+      <h1>{data.title}</h1>
       <p>{data.message}</p>
     </div>
   );
@@ -14,6 +14,7 @@ export default async function ExamplePage() {
 async function fetchDataFromServer() {
   // 在实际项目中，这里可以是从数据库或其他外部 API 获取数据的逻辑
   return {
+    title: 'Server Side Rendered Component',
     message: 'hello',
   };
 }
